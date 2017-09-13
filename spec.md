@@ -1,4 +1,4 @@
----
+layout: "foobar"---
 layout: "fullpage"
 ---
 
@@ -96,7 +96,7 @@ layout: "fullpage"
   <tr> 
    <td style="vertical-align: top;">Java API for RESTful Web Services (JAX-RS) 2.1<br> </td> 
    <td style="vertical-align: top;"><a href="http://jcp.org/en/jsr/detail?id=370">370</a><br> </td> 
-   <td style="vertical-align: top;"><a href="http://search.maven.org/#search%7Cgav%7C1%7Cg%3A" org.glassfish.jersey.bundles"="" and="" a%3a"jax-rs-ri""="">Link</a><br> </td> 
+   <td style="vertical-align: top;"><a href="">FIXME!!! Link</a><br> </td> 
   </tr> 
   <tr> 
    <td style="vertical-align: top;">Java API for XML-Based Web Services (JAX-WS) 2.3 (MR completed Aug. 2017)<br> </td> 
