@@ -26,6 +26,7 @@ Java EE 8 is focused on modernization and simplification of the platform, key ad
 
 The updated platform contains several major new specifications (for example, WebSocket) and updates to other specifications.
 
+
 ## Web Application Technologies ##
 
 | Specifications 	|JSR             	|RI       	|
