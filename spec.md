@@ -1,4 +1,5 @@
 ---
+layout: "fullpage"
 ---
 
 | Specifications 	|JSR             	|RI       	|
