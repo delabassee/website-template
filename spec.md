@@ -1,4 +1,4 @@
-layout: "foobar"---
+---
 layout: "fullpage"
 ---
 
