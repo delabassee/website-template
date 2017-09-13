@@ -27,14 +27,15 @@ Java EE 8 is focused on modernization and simplification of the platform, key ad
 The updated platform contains several major new specifications (for example, WebSocket) and updates to other specifications.
 
 ## Web Application Technologies ##
+
 | Specifications 	|JSR             	|RI       	|
 |:---	|:---	|:---	|
-|Java Servlet 4.0| []() 	| [Download]
-|JavaServer Faces (JSF) 2.3 | []() 	| [Download]
-|Java API for WebSocket 1.1 (MR completed Aug. 2014) | []() 	| [Download]
-|Java API for JSON Binding (JSON B) 1.0	367	| []() 	| [Download]
-|Java API for JSON Processing 1.1| []() 	| [Download]
-|Expression Language 3.0| []() 	| [Download]
-|JavaServer Pages 2.3| []() 	| [Download]
-|Standard Tag Library for JavaServer Pages| []() 	| [Download] (JSTL) 1.2
-|Debugging Support for Other Languages 1.0| []() 	| [Download]
+|Java Servlet 4.0| []() 	| [Download]|
+|JavaServer Faces (JSF) 2.3 | []() 	| [Download]|
+|Java API for WebSocket 1.1 (MR completed Aug. 2014) | []() 	| [Download]|
+|Java API for JSON Binding (JSON B) 1.0	367	| []() 	| [Download]|
+|Java API for JSON Processing 1.1| []() 	| [Download]|
+|Expression Language 3.0| []() 	| [Download]|
+|JavaServer Pages 2.3| []() 	| [Download]|
+|Standard Tag Library for JavaServer Pages| []() 	| [Download] (JSTL) 1.2|
+|Debugging Support for Other Languages 1.0| []() 	| [Download]|
