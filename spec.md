@@ -64,7 +64,7 @@ The updated platform contains several major new specifications (for example, Web
 |Java Persistence 2.2 (MR Completed May 2017)| [JSR 338](http://jcp.org/en/jsr/detail?id=338) | [Link](http://www.eclipse.org/eclipselink/downloads/ri.php)|
 |Bean Validation 2.0| [JSR 380](http://jcp.org/en/jsr/detail?id=380) | [Link](http://beanvalidation.org/2.0/ri/)|
 |Contexts and Dependency Injection (CDI) for Java 2.0| [JSR 365](http://jcp.org/en/jsr/detail?id=365) | [Link](http://download.jboss.org/weld/3.0.0.Final/)|
-|Dependency Injection for Java 1.0| [JSR 330](http://jcp.org/en/jsr/detail?id=330) | [FIXME](http://atinject.googlecode.com/files/javax.inject-1-bundle.jar)|
+|Dependency Injection for Java 1.0| [JSR 330](http://jcp.org/en/jsr/detail?id=330) | [Link](https://code.google.com/archive/p/atinject/downloads)|
 |Java EE Connector Architecture 1.7| [JSR 322](http://jcp.org/en/jsr/detail?id=322) | [Download]()|
 |Java Transaction API (JTA) 1.2| [JSR 907](http://jcp.org/en/jsr/detail?id=907) | [Download]()|
 |Common Annotations for the Java Platform 1.3 (MR Completed July 2016)| [JSR 250](http://jcp.org/en/jsr/detail?id=250) | [Download]()|
