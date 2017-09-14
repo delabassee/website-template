@@ -56,8 +56,8 @@ The updated platform contains several major new specifications (for example, Web
 ## Enterprise Application Technologies ###
 
 | Specifications 	|JSR             	|RI       	|
-|:---	|:---	|:---	|
-|Java Message Service (JMS) 2.0 -- The stand-alone JMS 2.0 RI is available from this link.| [JSR 343](http://jcp.org/en/jsr/detail?id=343) | [Download]()|
+|:---	|:---:|:---	|
+|Java Message Service (JMS) 2.0 -- The stand-alone JMS 2.0 RI is available from [this link](https://javaee.github.io/openmq/www/downloads/ri/).| [JSR 343](http://jcp.org/en/jsr/detail?id=343) | [Download]()|
 |Batch Applications for the Java Platform 1.0| [JSR 352](http://jcp.org/en/jsr/detail?id=352) | [Download]()|
 |Concurrency Utilities for Java EE 1.0| [JSR 236](http://jcp.org/en/jsr/detail?id=236) | [Download]()|
 |Enterprise JavaBeans 3.2| [JSR 345](http://jcp.org/en/jsr/detail?id=345) | [Download]()|
