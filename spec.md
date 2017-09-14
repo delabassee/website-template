@@ -84,7 +84,7 @@ The updated platform contains several major new specifications (for example, Web
 
 ## Previous release ###
 
-[Java EE 7 RI download page](xxx)
+[Java EE 7 RI download page -- fix link to 7!](https://javaee.github.io/glassfish/downloads/ri/index.html)
 
 
 
