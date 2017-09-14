@@ -20,7 +20,7 @@ Java EE 8 is focused on modernization and simplification of the platform, key ad
 - Support for Java SE 8 new capabilities (ex. Data & Time API, Streams API, annotations enhancements, ...) 
 
 | Specifications 	|JSR             	|RI       	|
-|:---	|:---	|:---	|
+|:---	|:---:|:---:|
 | Java Platform Enterprise Edition 8       	| [JSR 366](http://jcp.org/en/jsr/detail?id=366) 	| [Download](http://javaweb.us.oracle.com/java/re/glassfish/5.0/promoted/ri-source-build-final/javaee-ri.zip)|
 | Java Platform Enterprise Edition 8 Web Profile |[JSR 366](http://jcp.org/en/jsr/detail?id=366)   	|[Download](http://javaweb.us.oracle.com/java/re/glassfish/5.0/promoted/ri-source-build-final/javaee-ri.zip) |
 
@@ -30,9 +30,9 @@ The updated platform contains several major new specifications (for example, Web
 ## Web Application Technologies ##
 
 | Specifications 	|JSR             	|RI       	|
-|:---	|:---	|:---	|
+|:---	|:---:|:---:|
 |Java Servlet 4.0| [JSR 369](https://jcp.org/en/jsr/detail?id=369) | [Download]()|
-|JavaServer Faces (JSF) 2.3 | [JSR 272](https://jcp.org/en/jsr/detail?id=372) 	| [Download]()|
+|JavaServer Faces (JSF) 2.3 | [JSR 272](https://jcp.org/en/jsr/detail?id=372) 	| [Link](https://javaserverfaces.github.io/)|
 |Java API for WebSocket 1.1 (MR completed Aug. 2014) | [JSR 356](https://jcp.org/en/jsr/detail?id=356) 	| [Download]()|
 |Java API for JSON Binding (JSON B) 1.0	367	| [JSR 367](https://jcp.org/en/jsr/detail?id=367) 	| [Download]()|
 |Java API for JSON Processing 1.1| [JSR 374](https://jcp.org/en/jsr/detail?id=374) 	| [Download]()|
@@ -44,7 +44,7 @@ The updated platform contains several major new specifications (for example, Web
 ## Web Services Technologies ###
 
 | Specifications 	|JSR             	|RI       	|
-|:---	|:---	|:---	|
+|:---	|:---:|:---:|
 |Java API for RESTful Web Services (JAX-RS) 2.1| [JSR 370](http://jcp.org/en/jsr/detail?id=370) | [Download]()|
 |Java API for XML-Based Web Services (JAX-WS) 2.3 (MR completed Aug. 2017)| [JSR 224](http://jcp.org/en/jsr/detail?id=224) | [Download]()|
 |Java Architecture for XML Binding (JAXB) 2.2| [JSR 222](http://jcp.org/en/jsr/detail?id=222) | [Download]()|
@@ -56,7 +56,7 @@ The updated platform contains several major new specifications (for example, Web
 ## Enterprise Application Technologies ###
 
 | Specifications 	|JSR             	|RI       	|
-|:---	|:---:|:---	|
+|:---	|:---:|:---:|
 |Java Message Service (JMS) 2.0 -- The stand-alone JMS 2.0 RI is available from [this link](https://javaee.github.io/openmq/www/downloads/ri/).| [JSR 343](http://jcp.org/en/jsr/detail?id=343) | [Download]()|
 |Batch Applications for the Java Platform 1.0| [JSR 352](http://jcp.org/en/jsr/detail?id=352) | [Download]()|
 |Concurrency Utilities for Java EE 1.0| [JSR 236](http://jcp.org/en/jsr/detail?id=236) | [Download]()|
@@ -73,7 +73,7 @@ The updated platform contains several major new specifications (for example, Web
 ## Management and Security Technologies ###
 
 | Specifications 	|JSR             	|RI       	|
-|:---	|:---	|:---	|
+|:---	|:---:|:---:|
 |Java EE Security API 1.0| [JSR 375](http://jcp.org/en/jsr/detail?id=375) | [Download]()|
 |Java Authentication Service Provider Interface for Containers 1.1| [JSR 196](http://jcp.org/en/jsr/detail?id=196) | [Download]()|
 |Java Authorization Contract for Containers 1.5| [JSR 115](http://jcp.org/en/jsr/detail?id=115) | [Download]()|
