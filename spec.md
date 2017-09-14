@@ -34,9 +34,9 @@ The updated platform contains several major new specifications (for example, Web
 | Specifications 	|JSR             	|RI       	|
 |:---	|:---:|:---:|
 |Java Servlet 4.0| [JSR 369](https://jcp.org/en/jsr/detail?id=369) | [Download]()|
-|JavaServer Faces (JSF) 2.3 | [JSR 272](https://jcp.org/en/jsr/detail?id=372) 	| [Link](https://javaserverfaces.github.io/)|
+|JavaServer Faces (JSF) 2.3 | [JSR 372](https://jcp.org/en/jsr/detail?id=372) 	| [Link](https://javaserverfaces.github.io/)|
 |Java API for WebSocket 1.1 (MR completed Aug. 2014) | [JSR 356](https://jcp.org/en/jsr/detail?id=356) 	| [Download]()|
-|Java API for JSON Binding (JSON B) 1.0	367	| [JSR 367](https://jcp.org/en/jsr/detail?id=367) 	| [Download]()|
+|Java API for JSON Binding (JSON B) 1.0| [JSR 367](https://jcp.org/en/jsr/detail?id=367) 	| [Download]()|
 |Java API for JSON Processing 1.1| [JSR 374](https://jcp.org/en/jsr/detail?id=374) 	| [Download]()|
 |Expression Language 3.0| [JSR 341](https://jcp.org/en/jsr/detail?id=341) 	| [Download]()|
 |JavaServer Pages 2.3| [JSR 245](http://jcp.org/en/jsr/detail?id=245) 	| [Download]()|
