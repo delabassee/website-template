@@ -45,11 +45,11 @@ The updated platform contains several major new specifications (for example, Web
 
 | Specifications 	|JSR             	|RI       	|
 |:---	|:---:|:---:|
-|Java API for RESTful Web Services (JAX-RS) 2.1| [JSR 370](http://jcp.org/en/jsr/detail?id=370) | [Download]()|
-|Java API for XML-Based Web Services (JAX-WS) 2.3 (MR completed Aug. 2017)| [JSR 224](http://jcp.org/en/jsr/detail?id=224) | [Download]()|
-|Java Architecture for XML Binding (JAXB) 2.2| [JSR 222](http://jcp.org/en/jsr/detail?id=222) | [Download]()|
+|Java API for RESTful Web Services (JAX-RS) 2.1| [JSR 370](http://jcp.org/en/jsr/detail?id=370) | [FixMeDownload]()|
+|Java API for XML-Based Web Services (JAX-WS) 2.3 (MR completed Aug. 2017)| [JSR 224](http://jcp.org/en/jsr/detail?id=224) | [Link](https://javaee.github.io/metro-jax-ws/)|
+|Java Architecture for XML Binding (JAXB) 2.2| [JSR 222](http://jcp.org/en/jsr/detail?id=222) | [Link](https://javaee.github.io/jaxb-v2/)|
 |Enterprise Web Services 1.3| [JSR 109](http://jcp.org/en/jsr/detail?id=109) | [Download]()|
-|Web Services Metadata for the Java Platform| [JSR 181](http://jcp.org/en/jsr/detail?id=181) | [Download]()|
+|Web Services Metadata for the Java Platform| [JSR 181](http://jcp.org/en/jsr/detail?id=181) | [Link](https://javaee.github.io/metro-jax-ws/)|
 |Java API for XML-Based RPC (JAX-RPC) 1.1 (optional)| [JSR 101](http://jcp.org/en/jsr/detail?id=101) | [Download]()|
 |Java API for XML Registries (JAXR) 1.0 (optional)| [JSR 93](http://jcp.org/en/jsr/detail?id=93) | [Download]()|
 
@@ -61,14 +61,14 @@ The updated platform contains several major new specifications (for example, Web
 |Batch Applications for the Java Platform 1.0| [JSR 352](http://jcp.org/en/jsr/detail?id=352) | [Download]()|
 |Concurrency Utilities for Java EE 1.0| [JSR 236](http://jcp.org/en/jsr/detail?id=236) | [Download]()|
 |Enterprise JavaBeans 3.2| [JSR 345](http://jcp.org/en/jsr/detail?id=345) | [Download]()|
-|Java Persistence 2.2 (MR Completed May 2017)| [JSR 338](http://jcp.org/en/jsr/detail?id=338) | [Download]()|
-|Bean Validation 2.0| [JSR 380](http://jcp.org/en/jsr/detail?id=380) | [Download]()|
-|Contexts and Dependency Injection (CDI) for Java 2.0| [JSR 365](http://jcp.org/en/jsr/detail?id=365) | [Download]()|
-|Dependency Injection for Java 1.0| [JSR 330](http://jcp.org/en/jsr/detail?id=330) | [Download]()|
+|Java Persistence 2.2 (MR Completed May 2017)| [JSR 338](http://jcp.org/en/jsr/detail?id=338) | [Link](http://www.eclipse.org/eclipselink/downloads/ri.php)|
+|Bean Validation 2.0| [JSR 380](http://jcp.org/en/jsr/detail?id=380) | [Link](http://beanvalidation.org/2.0/ri/)|
+|Contexts and Dependency Injection (CDI) for Java 2.0| [JSR 365](http://jcp.org/en/jsr/detail?id=365) | [Link](http://download.jboss.org/weld/3.0.0.Final/)|
+|Dependency Injection for Java 1.0| [JSR 330](http://jcp.org/en/jsr/detail?id=330) | [FIXME](http://atinject.googlecode.com/files/javax.inject-1-bundle.jar)|
 |Java EE Connector Architecture 1.7| [JSR 322](http://jcp.org/en/jsr/detail?id=322) | [Download]()|
 |Java Transaction API (JTA) 1.2| [JSR 907](http://jcp.org/en/jsr/detail?id=907) | [Download]()|
 |Common Annotations for the Java Platform 1.3 (MR Completed July 2016)| [JSR 250](http://jcp.org/en/jsr/detail?id=250) | [Download]()|
-|JavaMail 1.6 (MR completed Aug. 2017)| [JSR 919](http://jcp.org/en/jsr/detail?id=919) | [Download]()|
+|JavaMail 1.6 (MR completed Aug. 2017)| [JSR 919](http://jcp.org/en/jsr/detail?id=919) | [Link](https://javaee.github.io/javamail/)|
 
 ## Management and Security Technologies ###
 
@@ -83,3 +83,6 @@ The updated platform contains several major new specifications (for example, Web
 ## Previous release ###
 
 [Java EE 7 RI download page](xxx)
+
+
+
