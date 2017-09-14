@@ -47,7 +47,7 @@ The updated platform contains several major new specifications (for example, Web
 
 | Specifications 	|JSR             	|RI       	|
 |:---	|:---:|:---:|
-|Java API for RESTful Web Services (JAX-RS) 2.1| [JSR 370](http://jcp.org/en/jsr/detail?id=370) | [FixMeDownload]()|
+|Java API for RESTful Web Services (JAX-RS) 2.1| [JSR 370](http://jcp.org/en/jsr/detail?id=370) | [Download](https://maven.java.net/content/repositories/releases/org/glassfish/jersey/bundles/jaxrs-ri/2.26/jaxrs-ri-2.26.zip)|
 |Java API for XML-Based Web Services (JAX-WS) 2.3 (MR completed Aug. 2017)| [JSR 224](http://jcp.org/en/jsr/detail?id=224) | [Link](https://javaee.github.io/metro-jax-ws/)|
 |Java Architecture for XML Binding (JAXB) 2.2| [JSR 222](http://jcp.org/en/jsr/detail?id=222) | [Link](https://javaee.github.io/jaxb-v2/)|
 |Enterprise Web Services 1.3| [JSR 109](http://jcp.org/en/jsr/detail?id=109) | [Download]()|
