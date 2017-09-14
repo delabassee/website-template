@@ -70,15 +70,18 @@ The updated platform contains several major new specifications (for example, Web
 |Common Annotations for the Java Platform 1.3 (MR Completed July 2016)| [JSR 250]() | [Download]()|
 |JavaMail 1.6 (MR completed Aug. 2017)| [JSR 919]() | [Download]()|
 
-## xxx ###
+## Management and Security Technologies ###
 
 | Specifications 	|JSR             	|RI       	|
 |:---	|:---	|:---	|
-|| [JSR]() | [Download]()|
-|| [JSR]() | [Download]()|
-|| [JSR]() | [Download]()|
-|| [JSR]() | [Download]()|
-|| [JSR]() | [Download]()|
+|Java EE Security API 1.0| [JSR 375]() | [Download]()|
+|Java Authentication Service Provider Interface for Containers 1.1| [JSR 196]() | [Download]()|
+|Java Authorization Contract for Containers 1.5| [JSR 115]() | [Download]()|
+|J2EE Management 1.1| [JSR 77]() | [Download]()|
+|Java EE Application Deployment 1.2 (optional)| [JSR 88]() | [Download]()|
 || [JSR]() | [Download]()|
 || [JSR]() | [Download]()|
 
+## Previous release ###
+
+[Java EE 7 RI download page](xxx)
