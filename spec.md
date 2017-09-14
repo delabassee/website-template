@@ -40,3 +40,28 @@ The updated platform contains several major new specifications (for example, Web
 |JavaServer Pages 2.3| [JSR]() 	| [Download]()|
 |Standard Tag Library for JavaServer Pages| [JSR]() 	| [Download]()|
 |Debugging Support for Other Languages 1.0| [JSR]() 	| [Download]()|
+
+## Web Services Technologies ###
+
+| Specifications 	|JSR             	|RI       	|
+|:---	|:---	|:---	|
+|Java API for RESTful Web Services (JAX-RS) 2.1| [JSR 370]() | [Download]()|
+|Java API for XML-Based Web Services (JAX-WS) 2.3 (MR completed Aug. 2017)| [JSR 224]() | [Download]()|
+|Java Architecture for XML Binding (JAXB) 2.2| [JSR 222]() | [Download]()|
+|Enterprise Web Services 1.3| [JSR 109]() | [Download]()|
+|Web Services Metadata for the Java Platform| [JSR 181]() | [Download]()|
+|Java API for XML-Based RPC (JAX-RPC) 1.1 (optional)| [JSR 101]() | [Download]()|
+|Java API for XML Registries (JAXR) 1.0 (optional)| [JSR 93]() | [Download]()|
+
+## xxx ###
+
+| Specifications 	|JSR             	|RI       	|
+|:---	|:---	|:---	|
+|| [JSR]() | [Download]()|
+|| [JSR]() | [Download]()|
+|| [JSR]() | [Download]()|
+|| [JSR]() | [Download]()|
+|| [JSR]() | [Download]()|
+|| [JSR]() | [Download]()|
+|| [JSR]() | [Download]()|
+
