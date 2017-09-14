@@ -53,6 +53,23 @@ The updated platform contains several major new specifications (for example, Web
 |Java API for XML-Based RPC (JAX-RPC) 1.1 (optional)| [JSR 101]() | [Download]()|
 |Java API for XML Registries (JAXR) 1.0 (optional)| [JSR 93]() | [Download]()|
 
+## Enterprise Application Technologies ###
+
+| Specifications 	|JSR             	|RI       	|
+|:---	|:---	|:---	|
+|Java Message Service (JMS) 2.0 -- The stand-alone JMS 2.0 RI is available from this link.| [JSR 343]() | [Download]()|
+|Batch Applications for the Java Platform 1.0| [JSR 352]() | [Download]()|
+|Concurrency Utilities for Java EE 1.0| [JSR 236]() | [Download]()|
+|Enterprise JavaBeans 3.2| [JSR 345]() | [Download]()|
+|Java Persistence 2.2 (MR Completed May 2017)| [JSR 338]() | [Download]()|
+|Bean Validation 2.0| [JSR 380]() | [Download]()|
+|Contexts and Dependency Injection (CDI) for Java 2.0| [JSR 365]() | [Download]()|
+|Dependency Injection for Java 1.0| [JSR 330]() | [Download]()|
+|Java EE Connector Architecture 1.7| [JSR 322]() | [Download]()|
+|Java Transaction API (JTA) 1.2| [JSR 907]() | [Download]()|
+|Common Annotations for the Java Platform 1.3 (MR Completed July 2016)| [JSR 250]() | [Download]()|
+|JavaMail 1.6 (MR completed Aug. 2017)| [JSR 919]() | [Download]()|
+
 ## xxx ###
 
 | Specifications 	|JSR             	|RI       	|
