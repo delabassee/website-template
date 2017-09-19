@@ -1,3 +1,6 @@
+---
+layout: "brkpage"
+---
 # Sub
 
 test!
