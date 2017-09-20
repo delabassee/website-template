@@ -3,7 +3,7 @@
 * [GF 5.0 - Web Profile](http://download.oracle.com/glassfish/5.0/release/glassfish-5.0-web.zip)
 * [GF 5.0 - Full Platform](http://download.oracle.com/glassfish/5.0/release/glassfish-5.0.zip)
 
-As an open source project, GlassFish is being developed in an open manner. Development versions of ongoing work for the next GlassFish iteration, i.e. GlassFish 5, are available below.
+As an open source project, GlassFish is being developed in an open manner. Development versions of ongoing work for the next GlassFish iteration, i.e. GlassFish 5.0.1, will soon be made available below.
 
 * [Browse all GF 5 available builds](http://download.oracle.com/glassfish/5.0/nightly/)
 
