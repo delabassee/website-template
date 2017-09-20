@@ -22,7 +22,6 @@ The reference implementation [downloads for Java EE 8](downloads/ri/index.html)
     * [GlassFish 4.1](http://download.oracle.com/glassfish/4.1)
     * [GlassFish 4.0](http://download.oracle.com/glassfish/4.0)
 * Java EE 6 - GlassFish 3
-    * [GlassFish 3.2](http://download.oracle.com/glassfish/3.2)
     * [GlassFishF 3.1.2.2](http://download.oracle.com/glassfish/3.1.2.2)
     * [GlassFish 3.1.2](http://download.oracle.com/glassfish/3.1.2)
     * [GlassFish 3.1.1](http://download.oracle.com/glassfish/3.1.1)
