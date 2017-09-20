@@ -17,14 +17,14 @@ The reference implementation [downloads for Java EE 8](downloads/ri/index.html)
 # Older GlassFish versions (archive) #
 
 * Java EE 7 - GlassFish 4
-** [GlassFish 4.1.2 - Web Profile](http://download.java.net/glassfish/4.1.2/release/glassfish-4.1.2-web.zip) &#124; [GlassFish 4.1.2 - Full Platform](http://download.java.net/glassfish/4.1.2/release/glassfish-4.1.2.zip)
-** [GlassFish 4.1.1](http://download.oracle.com/glassfish/4.1.1)
-** [GlassFish 4.1](http://download.oracle.com/glassfish/4.1)
-** [GlassFish 4.0](http://download.oracle.com/glassfish/4.0)
+    * [GlassFish 4.1.2 - Web Profile](http://download.java.net/glassfish/4.1.2/release/glassfish-4.1.2-web.zip) &#124; [GlassFish 4.1.2 - Full Platform](http://download.java.net/glassfish/4.1.2/release/glassfish-4.1.2.zip)
+    * [GlassFish 4.1.1](http://download.oracle.com/glassfish/4.1.1)
+    * [GlassFish 4.1](http://download.oracle.com/glassfish/4.1)
+    * [GlassFish 4.0](http://download.oracle.com/glassfish/4.0)
 * Java EE 6 - GlassFish 3
-** [GlassFish 3.2](http://download.oracle.com/glassfish/3.2)
-** [GlassFishF 3.1.2.2](http://download.oracle.com/glassfish/3.1.2.2)
-** [GlassFish 3.1.2](http://download.oracle.com/glassfish/3.1.2)
-** [GlassFish 3.1.1](http://download.oracle.com/glassfish/3.1.1)
+    * [GlassFish 3.2](http://download.oracle.com/glassfish/3.2)
+    * [GlassFishF 3.1.2.2](http://download.oracle.com/glassfish/3.1.2.2)
+    * [GlassFish 3.1.2](http://download.oracle.com/glassfish/3.1.2)
+    * [GlassFish 3.1.1](http://download.oracle.com/glassfish/3.1.1)
 * [Oracle GlassFish Server]
-** See archive [here](http://www.oracle.com/technetwork/java/javaee/downloads/java-archive-downloads-glassfish-419424.html).
+    * See archive [here](http://www.oracle.com/technetwork/java/javaee/downloads/java-archive-downloads-glassfish-419424.html).
