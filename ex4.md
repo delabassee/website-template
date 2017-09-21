@@ -104,7 +104,9 @@ To compile your code, you need to add the Soteria dependency to your pom.xml
         </dependency>
 
 
-Now you can test the application, *david* and *michael* should be able to logged in the application while *ed* will be rejected as he doesn't have the approrpiate *"foo"* role.
+Now you can test the application, *david* and *michael* should be able to logged in the application while *ed* will be rejected (HTTP Status 403 - Forbidden) as he doesn't have the approrpiate *"foo"* role.
+
+*PIC*
 
 :bulb: To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication with a different user.
 
