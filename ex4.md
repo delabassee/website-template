@@ -52,14 +52,11 @@ Update it as follow
 
 Now right click and select *"Run File"*. This action will compile and deploy our Web Application to GlassFish 5, NetBeans will then launch the browser to test it.
 
-If it works, you will simply see the text produced by the processRequest method "Java EE HoL".
-
-:bulb: When testing your application, always make sure to connect to the servlet and not to the *index.html* that NetBeans also creates!
+If it works, you will simply see the text produced by the processRequest method "Java EE HoL". 
 
 We now have a simple CDI enabled Servlet 4.0 basic application that we will secure using the Java EE Security API.
 
-:bulb: To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication.
-
+:bulb: When testing your application, always make sure to connect to the servlet and not to the *index.html* that NetBeans also creates!
 
 
 :warning: To demonstrate the concept, we will use Basic Authentication. In this method, the client sends the user name and password as unencrypted base64 encoded text to the server. This is **clearly not a secure approach and it shouldn't be used for any serious application:bangbang:**
@@ -70,19 +67,21 @@ In the servlet class source, you have the following annotation
 
     @WebServlet(name = "NewServlet", urlPatterns = {"/test"})
 
+:arrow_right: We are telling to GlassFish that this is a servlet and that its url is *"/test"* (under the the context of the Web application).
+
 Add the following annotations
 
     @DeclareRoles({"foo", "bar"})
     
-:arrow_right: blabla
+:arrow_right: This annotation specific that our application will work with 2 types of user roles: foo & bar.
 
     @ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
 
-:arrow_right: blabla
+:arrow_right: This annotation specify security constraints to be enforced by the Servlet container on HTTP protocol messages, i.e. only user of role *"foo"* will be allowed.
 
     @BasicAuthenticationMechanismDefinition(realmName="HOL-basic" )
 
-:arrow_right: blabla
+:arrow_right: This annotation specify the speicifc container authentication mechanism : "HTTP basic access authentication"and make that it available as an enabled CDI bean.
 
     @EmbeddedIdentityStoreDefinition({
         @Credentials(callerName = "david", password = "david", groups = {"foo"}),
@@ -90,7 +89,7 @@ Add the following annotations
         @Credentials(callerName = "michael", password = "michael", groups = {"foo"})}
     )
 
-:arrow_right: blabla
+:arrow_right: This annotation is used to specify which IdentityStore to use, in this case, we will use the   Embedded Identity Store which require to directly specify our users. 
 
 :warning: In the interrest of time, we will take a shortcut and use the most basic IdentityStore to store our users: EmbeddedIdentityStore. This identity store allows you to store users details (username, password and groups) in your code in clear! *This is highly unsecure and not something you should do for any applications:bangbang:*
 Since EmbeddedIdentityStore is unsecure it was decided to not include it in the specification. Technically, the EmbeddedIdentityStore is provided by Soteria, the JSR 375 Reference Implementation so it is also available as part of GlassFish 5.
@@ -103,5 +102,11 @@ To compile your code, you need to add the Soteria dependency to your pom.xml
             <version>1.0</version>
             <scope>provided</scope>
         </dependency>
+
+
+
+
+
+:bulb: To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication.
 
 
