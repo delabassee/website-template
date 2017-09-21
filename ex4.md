@@ -104,10 +104,17 @@ To compile your code, you need to add the Soteria dependency to your pom.xml
         </dependency>
 
 
-Now you can test the application, *david* and *michael* should be able to logged in the application while *ed* will be rejected (HTTP Status 403 - Forbidden) as he doesn't have the approrpiate *"foo"* role.
+Now you can test the application, *david* and *michael* should be able to logged in the application while *ed* will be rejected (HTTP Status 403 - Forbidden) as he doesn't have the approrpiate *"foo"* role. This error page is obviously customizable but that is beyond the scope of this exercice.
 
 *PIC*
 
 :bulb: To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication with a different user.
+
+# Secure the application using a custom IdentityStore
+
+In the previous step, you saw that it was possible to easily secure a web application in a portable way! 
+The Java EE Security API offers multiple authentication mechanism 
+
+Obviously, the Java EE Security AP
 
 
