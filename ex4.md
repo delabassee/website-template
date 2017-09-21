@@ -113,7 +113,9 @@ Now you can test the application, *david* and *michael* should be able to logged
 # Secure the application using a custom IdentityStore
 
 In the previous step, you saw that it was possible to easily secure a web application in a portable way! 
-The Java EE Security API offers multiple authentication mechanism 
+To illustrate the concept, we have use an EmbeddedIdentityStore which, by nature, is not secure. The JSR 375 defines IndendtityStore that are designed to cope with modern applications, namely the LdapIdentityStore and the DatabaseIdentityStore which are used to store users information respectvely in a LDAP and in a database. Those store can be configured using the *@LdapIdentityStoreDefinition* and 
+*@DatabaseIdentityStoreDefinition* annotations.
+
 
 Obviously, the Java EE Security AP
 
