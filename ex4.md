@@ -19,43 +19,46 @@ Note that for the HoL, we are only using APIs from the Java EE 8 Profile.
             <scope>provided</scope>
         </dependency>
 
+## Create the Web application
 
+We will not create a Servlet-based Web application that we will later on secure using the new Java EE Security API (JSR 375).
 
-We will not create a Servlet that we will later on secure using the XXX API.
+Right click on the project, select *"new"* and *"servlet"*.
+Make sure to specify a package where you code will reside, eg. *"org.j1hol"* and click *"next"* then *"finish"*.
 
-Right click on the project, select "new" and "servlet".
-Make sure to specify a package where you code will reside, eg. "org.j1hol" and click "next" and "finish"
-
-
-/!/ We need to make sure to enable CDI. For that, we need to create an empty beans.xml in the WEB-INF directory. 
-
-Beans.xml is used to customise the CDI container. When it's empty, it's just a marker file that tell the application server that CDI is used.
+:bulb: We need to make sure to enable CDI. For that, we need to create an empty beans.xml in the WEB-INF directory. Beans.xml can also be used to customise the CDI container; when it's empty, it's just a marker file that tell the application server that CDI is used.
 
 In the project, locate the WEB-INF directory under "Web Pages" and right click to create an empty file called beans.xml
-Even tough the file looks empty, it's not as it's size is 1 byte. That means that GlassFish will parse it so it has to be a valid XML file.
-Just add <xml/> to make sure that it is indeed a valid XML file.
-So instead of an empty file, we have have a valid empty xml file.
+
+:bulb: Even tough the file looks empty, it's not as it's size is 1 byte. That means that GlassFish will parse it so it has to be a valid XML file. Just add *<xml/>* to make sure that it is indeed a valid XML file. So instead of an empty file, we have have created a valid empty xml file!
 
 
-Navigate to the servlet source that has just been created and locate the processRequest method.
+Navigate to the servlet source that has just been created and locate the *processRequest* method.
 
 Update it as follow
 
-            out.println("<!DOCTYPE html><html><body>");            
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            out.println("<!DOCTYPE html><html><body>");
             out.println("<div style=\"font-size:150%;font-weight:100;font-family: sans-serif;text-align: center;color: DimGray;margin-top: 40vh;line-height: 150%\">");
             out.println("Java EE 8 HoL<br/>");
-            out.println("</body></html>");
+            out.println(request.getAuthType());
+            out.println("</body></html>");      
+                        
+        }
+    }
 
-Now right click, and select "Run File". This action will compile and deploy our Web Application to GlassFish 5, NetBeans will then launch the browser to test it.
+Now right click and select *"Run File"*. This action will compile and deploy our Web Application to GlassFish 5, NetBeans will then launch the browser to test it.
 
 If it works, you will simply see the text produced by the processRequest method "Java EE HoL".
 
-NB: when testing your application, make sure you actually connect to the servlet and not just accessing the index.html that NetBeans also creates!
+:bulb: When testing your application, always make sure to connect to the servlet and not to the *index.html* that NetBeans also creates!
 
-We now have a simple CDI enabled Servlet 4.0 basic application that we will secure using the XXX API
+We now have a simple CDI enabled Servlet 4.0 basic application that we will secure using the Java EE Security API.
 
-
-/!/ To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication.
+:bulb: To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication.
 
 
 
