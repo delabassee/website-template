@@ -62,7 +62,7 @@ We now have a simple CDI enabled Servlet 4.0 basic application that we will secu
 
 
 
-:bulb: To demonstrate the concept, we will use Basic Authentication. In this method, the client sends the user name and password as unencrypted base64 encoded text to the server. This is **clearly not a secure approach and it shouldn't be used for any serious application!**
+:warning: To demonstrate the concept, we will use Basic Authentication. In this method, the client sends the user name and password as unencrypted base64 encoded text to the server. This is **clearly not a secure approach and it shouldn't be used for any serious application:bangbang:**
 
 
 
