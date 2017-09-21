@@ -54,22 +54,22 @@ Now right click and select *"Run File"*. This action will compile and deploy our
 
 If it works, you will simply see the text produced by the processRequest method "Java EE HoL". 
 
-We now have a simple CDI enabled Servlet 4.0 basic application that we will secure using the Java EE Security API.
-
 :bulb: When testing your application, always make sure to connect to the servlet and not to the *index.html* that NetBeans also creates!
 
+## Secure the Web application
 
-:warning: To demonstrate the concept, we will use Basic Authentication. In this method, the client sends the user name and password as unencrypted base64 encoded text to the server. This is **clearly not a secure approach and it shouldn't be used for any serious application:bangbang:**
+We now have a simple CDI enabled Servlet 4.0 basic application that we will secure using the Java EE Security API.
+
+:warning: To demonstrate the concept, we will use Basic Authentication. BasicAuth is a simple mechanism where the browser sends the user name and the password as unencrypted base64 encoded text to the server. This is **clearly not a secure approach and it shouldn't be used for any serious application:bangbang:**
 
 
-
-In the servlet class source, you have the following annotation 
+In the servlet class source, you shoudl have the following annotation 
 
     @WebServlet(name = "NewServlet", urlPatterns = {"/test"})
 
-:arrow_right: We are telling to GlassFish that this is a servlet and that its url is *"/test"* (under the the context of the Web application).
+:arrow_right: We are specifying to GlassFish Web container that this class is a servlet and that its url is *"/test"* (under the the context of the Web application).
 
-Add the following annotations
+You can now add the following annotations:
 
     @DeclareRoles({"foo", "bar"})
     
@@ -85,7 +85,7 @@ Add the following annotations
 
     @EmbeddedIdentityStoreDefinition({
         @Credentials(callerName = "david", password = "david", groups = {"foo"}),
-        @Credentials(callerName = "ed", password = "ed", groups = {"foo",}),
+        @Credentials(callerName = "ed", password = "ed", groups = {"bar",}),
         @Credentials(callerName = "michael", password = "michael", groups = {"foo"})}
     )
 
@@ -104,9 +104,8 @@ To compile your code, you need to add the Soteria dependency to your pom.xml
         </dependency>
 
 
+Now you can test the application, *david* and *michael* should be able to logged in the application while *ed* will be rejected as he doesn't have the approrpiate *"foo"* role.
 
-
-
-:bulb: To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication.
+:bulb: To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication with a different user.
 
 
