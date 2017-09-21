@@ -108,7 +108,7 @@ Now you can test the application, *david* and *michael* should be able to logged
 
 *PIC*
 
-:bulb: To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication with a different user.
+:bulb: To avoid caching issue, just start Chrome in Incognito mode each time you want to test authentication.
 
 # Secure the application using a custom IdentityStore
 
