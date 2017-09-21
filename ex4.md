@@ -73,11 +73,16 @@ In the servlet class source, you have the following annotation
 Add the following annotations
 
     @DeclareRoles({"foo", "bar"})
+    
+:arrow_right: blabla
 
     @ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
 
+:arrow_right: blabla
+
     @BasicAuthenticationMechanismDefinition(realmName="HOL-basic" )
 
+:arrow_right: blabla
 
     @EmbeddedIdentityStoreDefinition({
         @Credentials(callerName = "david", password = "david", groups = {"foo"}),
@@ -85,8 +90,9 @@ Add the following annotations
         @Credentials(callerName = "michael", password = "michael", groups = {"foo"})}
     )
 
-In the interrest of time, we will take a shortcut and use the most basic IdentityStore to store our users: EmbeddedIdentityStore
-This identity store allows you to store users details (username, password and groups) in your code in clear! This is highly unsecure and not something you should do for any applications!
+:arrow_right: blabla
+
+:warning: In the interrest of time, we will take a shortcut and use the most basic IdentityStore to store our users: EmbeddedIdentityStore. This identity store allows you to store users details (username, password and groups) in your code in clear! *This is highly unsecure and not something you should do for any applications:bangbang:*
 Since EmbeddedIdentityStore is unsecure it was decided to not include it in the specification. Technically, the EmbeddedIdentityStore is provided by Soteria, the JSR 375 Reference Implementation so it is also available as part of GlassFish 5.
 
 To compile your code, you need to add the Soteria dependency to your pom.xml 
