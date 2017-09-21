@@ -62,35 +62,34 @@ We now have a simple CDI enabled Servlet 4.0 basic application that we will secu
 
 
 
-/!/ To demonstrate the concept, we will use Basic Authentication. In this method, the client sends the user name and password as unencrypted base64 encoded text to the server. This is clearly not a secure approach and it shouldn't be used for any serious application!
+:bulb: To demonstrate the concept, we will use Basic Authentication. In this method, the client sends the user name and password as unencrypted base64 encoded text to the server. This is **clearly not a secure approach and it shouldn't be used for any serious application!**
 
 
 
 In the servlet class source, you have the following annotation 
 
-@WebServlet(name = "NewServlet", urlPatterns = {"/test"})
+    @WebServlet(name = "NewServlet", urlPatterns = {"/test"})
 
 Add the following annotations
 
-@DeclareRoles({"foo", "bar"})
+    @DeclareRoles({"foo", "bar"})
 
-@ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
+    @ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
 
-@BasicAuthenticationMechanismDefinition(realmName="HOL-basic" )
+    @BasicAuthenticationMechanismDefinition(realmName="HOL-basic" )
 
 
-@EmbeddedIdentityStoreDefinition({
-    @Credentials(callerName = "david", password = "david", groups = {"foo"}),
-    @Credentials(callerName = "ed", password = "ed", groups = {"foo",}),
-    @Credentials(callerName = "michael", password = "michael", groups = {"foo"})}
-)
+    @EmbeddedIdentityStoreDefinition({
+        @Credentials(callerName = "david", password = "david", groups = {"foo"}),
+        @Credentials(callerName = "ed", password = "ed", groups = {"foo",}),
+        @Credentials(callerName = "michael", password = "michael", groups = {"foo"})}
+    )
 
-In the interrest of time, we will take a shortcut and use the most basic IdentityStore to store our users : EmbeddedIdentityStore
-This identity store allows you to store users details (username, password and groups) in your code, in clear! This is clearly unsecure and not something you should do for any applications.
-Since EmbeddedIdentityStore is unsecure it was decided to not include it in the specification. Technically, the EmbeddedIdentityStore is provided by Soteria, the JSR 375 Reference Implementation so it is also part of GlassFish 5.
+In the interrest of time, we will take a shortcut and use the most basic IdentityStore to store our users: EmbeddedIdentityStore
+This identity store allows you to store users details (username, password and groups) in your code in clear! This is highly unsecure and not something you should do for any applications!
+Since EmbeddedIdentityStore is unsecure it was decided to not include it in the specification. Technically, the EmbeddedIdentityStore is provided by Soteria, the JSR 375 Reference Implementation so it is also available as part of GlassFish 5.
 
 To compile your code, you need to add the Soteria dependency to your pom.xml 
-
 
         <dependency>
             <groupId>org.glassfish.soteria</groupId>
@@ -98,7 +97,5 @@ To compile your code, you need to add the Soteria dependency to your pom.xml
             <version>1.0</version>
             <scope>provided</scope>
         </dependency>
-
-
 
 
