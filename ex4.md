@@ -9,12 +9,13 @@ Select *"GlassFish"* as the application server and *"Java EE7 Web"*, we will upd
 
 
 Select the projects's *pom.xml*, under *"Project Files"*. Now you can update the project to use Java EE 8 APIs but just updating the version number of the *<javaee-web-api>* dependency.
-Note that for the HoL, we are only using APIs from the Java EE 8 Profile.
+
+:bulb: This Lab is only using APIs from the Java EE 8 Profile.
 
 
         <dependency>
             <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
+            <artifactId>javaee-api</artifactId>
             <version>8.0</version>
             <scope>provided</scope>
         </dependency>
