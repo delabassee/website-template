@@ -123,12 +123,11 @@ Now you can test the application, *david* and *michael* should be able to logged
 # Secure the application using a custom IdentityStore
 
 In the previous step, you saw that it was possible to easily secure a web application in a portable way! 
-To illustrate the concepts, we have used an *EmbeddedIdentityStore* which, by design, is not secure. The Java EE Security API defines *IndendtityStore* that are designed to cope with modern applications, namely the **LdapIdentityStore** and the **DatabaseIdentityStore** which be used to (securely!) store users information respectvely in a LDAP and in a database. These stores can be configured using the [@LdapIdentityStoreDefinition](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/LdapIdentityStoreDefinition.html) and the [@DatabaseIdentityStoreDefinition](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/DatabaseIdentityStoreDefinition.html) annotations.
+To illustrate the concepts, we have used an *EmbeddedIdentityStore* which, by design, is not secure. The Java EE Security API defines IndentityStore that are designed to cope with modern applications, namely the **LdapIdentityStore** and the **DatabaseIdentityStore** which be used to (securely!) store users information respectvely in a LDAP and in a database. These stores can be configured using the [@LdapIdentityStoreDefinition](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/LdapIdentityStoreDefinition.html) and the [@DatabaseIdentityStoreDefinition](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/DatabaseIdentityStoreDefinition.html) annotations.
 
-The Java EE Security API can be extended. In this exerice, we will evolve our application to use a custom *IndendtityStore* instead of the *EmbeddedIdentityStore*. In the interreste of time, the *IdentityStore* we will develop will not be secure.
+The Java EE Security API can be extended. In this exerice, we will evolve our application to use a custom [IndentityStore](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/IdentityStore.html) instead of the *EmbeddedIdentityStore*. In the interreste of time, the [IndentityStore](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/IdentityStore.html) we will focsu on how to validate a user and not how to retreive his/her details from a secure store. 
 
-In the servlet class, remove or comment the *@EmbeddedIdentityStoreDefinition* annotation.
-Now, create a java class named **TestIdentityStore.java**. As this class will implement an IndentiyStore, it has to iplments the *IdentityStore* interface. Also make sure the class has the *Application* scope by annotating it with *@ApplicationScoped* as below.
+In the servlet class, remove or comment the *@EmbeddedIdentityStoreDefinition* annotation. Now create a java class named **TestIdentityStore.java**. As this class will implement an IndentiyStore, it has to iplments the [IndentityStore](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/IdentityStore.html) interface. Also make sure the class has the *Application* scope by annotating it with [@ApplicationScoped](https://javaee.github.io/javaee-spec/javadocs/javax/enterprise/context/ApplicationScoped.html) as below.
 
 ```java
  @ApplicationScoped
@@ -144,7 +143,7 @@ NetBeans will complain that some imports are missing, fix those.
  import javax.security.enterprise.identitystore.IdentityStore;
 ```
 
-We need to implement the [validate](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/CredentialValidationResult.html) method. This method will receive the credential of the user and will validate the user based on his/her details stored somewhere. For this exercice, we will simply store those details in an in-memory map, which again is not very secure! In a real application, your custom *IdentityStore* would fetch the user information from a secure store.
+We need to implement the [validate](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/IdentityStore.html#validate-javax.security.enterprise.credential.Credential-) method. This method will receive the [credential](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/credential/Credential.html) of the user and will validate the user based on his/her details stored somewhere. For this exercice, we will simply store those details in an in-memory map, which again is not very secure! In a real application, your custom *IdentityStore* would fetch the user information from a secure store.
 
 Add this code to create and populate the map that will hold our users.
 
