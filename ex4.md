@@ -162,8 +162,29 @@ Add this code to create and populate the map that will hold our users.
 :bulb:In practice, the IdentityStore will also hold the profile information of each users. In our exercice, we are taking another shortcut as the profile is simply based on the user name; i.e. the default profile is *"foo"* unless the user name contains *"a"*, in this case her/his profile is *"bar"*.
 
 
-We will now implement the [validate](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/CredentialValidationResult.html) method.
+Implement the [validate](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/CredentialValidationResult.html) method as follow.
 
+
+```java
+ public CredentialValidationResult validate(UsernamePasswordCredential usernamePasswordCredential) {
+        
+    String caller = usernamePasswordCredential.getCaller();
+    String pwd = usernamePasswordCredential.getPasswordAsString();        
+
+    // just for the exercice, assign the role based on the user name
+    String role = "foo";
+    if ( caller.contains("a") ) {
+       role = "bar";
+    } // else foo!
+        
+    if (usernamePasswordCredential.compareTo(caller,unsecureStore.get(caller))) {
+       // return a VALID result with the caller and the set of groups s/he belongs to.
+       return new CredentialValidationResult(caller, new HashSet<>(asList(role)));
+    }
+    return INVALID_RESULT;
+
+ }
+```
 
 
 
