@@ -187,4 +187,7 @@ Implement the [validate](https://javaee.github.io/javaee-spec/javadocs/javax/sec
 
 This method simply takes the credentials object, get the caller (the user) from this object,and compare the password from the crendential object against the pwaasword of that user in the map. Based on the user, it also assign him/her a role.
 
+Once you have fixed all the imports, run the application and test. Ed should be the only one allowed to log in as in has the *"foo"* role. Make sure to test 
+
+
 
