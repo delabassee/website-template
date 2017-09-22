@@ -116,7 +116,6 @@ Now you can test the application, *david* and *michael* should be able to logged
 In the previous step, you saw that it was possible to easily secure a web application in a portable way! 
 To illustrate the concepts, we have used an *EmbeddedIdentityStore* which, by design, is not secure. The Java EE Security API defines *IndendtityStore* that are designed to cope with modern applications, namely the **LdapIdentityStore** and the **DatabaseIdentityStore** which are used to (securely) store users information respectvely in a LDAP and in a database. These stores can be configured using the *@LdapIdentityStoreDefinition* and the *@DatabaseIdentityStoreDefinition* annotations.
 
-
-Obviously, the Java EE Security AP
+The Java EE Security API can be extended. In this exerice, we will evolve our application to use a custom *IndendtityStore* instead of the *EmbeddedIdentityStore*. In the interreste of time, the *IdentityStore* we will develop will not be secure.
 
 
