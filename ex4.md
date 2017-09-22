@@ -144,5 +144,21 @@ NetBeans will complain that some imports are missing, fix those.
  import javax.security.enterprise.identitystore.IdentityStore;
 ```
 
+We need to implement the [validate](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/CredentialValidationResult.html) method. This method will receive the credential of the user and will validate the user based on his/her details stored somewhere. For this exercice, we will store those details in a simple map in memory, which again is not secure but just image that from this method you can fetch the user details from any secure store.
+
+Add this code to create and populate the map that will hold our users.
+
+```java
+ static Map<String, String> unsecureStore = new HashMap<>();    
+    
+ public TestIdentityStore() {        
+    // Don't do this at home, highly unsecure!
+    unsecureStore.put("david", "DAVID");
+    unsecureStore.put("ed", "ED");
+    unsecureStore.put("lisa", "LISA");
+    unsecureStore.put("michael", "MICHAEL");        
+ }
+```
+
 
 
