@@ -159,7 +159,7 @@ Add this code to create and populate the map that will hold our users.
     unsecureStore.put("michael", "MICHAEL");        
  }
 ```
-:bulb:In practice, the IdentityStore will also hold the profile information of each users. In our exercice, we are taking another shortcut as the profile is simply based on the user name, i.e. the default profile is *"foo"* unless the user name contains *"a"*, in this case her/his profile is *"bar"*.
+:bulb:In practice, the IdentityStore will also hold the profile information of each users. In our exercice, we are taking another shortcut as the profile is simply based on the user name; i.e. the default profile is *"foo"* unless the user name contains *"a"*, in this case her/his profile is *"bar"*.
 
 
 We will now implement the [validate](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/identitystore/CredentialValidationResult.html) method.
