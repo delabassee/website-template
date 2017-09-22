@@ -1,16 +1,13 @@
 
 ## Initial setup
 
-Start a new Maven project and select *"Web Application"*
+In this exercise, we will use the new [Java EE Security API (JSR 375)](https://jcp.org/aboutJava/communityprocess/final/jsr375/index.html) to secure a Web application.
 
-Give it a meaningful name, ex. *"hol-security"*, click *"Next"*
+Start a new Maven project and select *"Web Application"* and give it a meaningful name, ex. *"hol-security"*, click *"Next"*.
 
 Select *"GlassFish"* as the application server and *"Java EE7 Web"*, we will update the Java EE API version later. Validate and you should now have an empty project.
 
-
-Select the projects's *pom.xml*, under *"Project Files"*. Now you can update the project to use Java EE 8 APIs but just updating the version number of the *<javaee-web-api>* dependency.
-
-:bulb: This Lab is only using APIs from the Java EE 8 Profile.
+Select the project's *pom.xml*, under *"Project Files"*. Now you can update the project to use Java EE 8 APIs but just updating the version number of the *<javaee-web-api>* dependency.
 
 ```xml
  <dependency>
@@ -21,9 +18,12 @@ Select the projects's *pom.xml*, under *"Project Files"*. Now you can update the
  </dependency>
 ```
 
+:bulb: This Lab is only using APIs from the Java EE 8 Profile which is a subset of the Full platform.
+
+
 ## Create the Web application
 
-We will not create a Servlet-based Web application that we will later on secure using the new Java EE Security API (JSR 375).
+We will now create a Servlet-based Web application that we will then secure using the new Java EE Security API.
 
 Right click on the project, select *"new"* and *"servlet"*.
 Make sure to specify a package where you code will reside, eg. *"org.j1hol"* and click *"next"* then *"finish"*.
