@@ -185,6 +185,6 @@ Implement the [validate](https://javaee.github.io/javaee-spec/javadocs/javax/sec
  }
 ```
 
-This method simply take the credentials object, get the caller, i.e. the user, and compare the password from the crendential against the one, for that user, the in-memory map. Based on the user, it also assign him/her a role.
+This method simply takes the credentials object, get the caller (the user) from this object,and compare the password from the crendential object against the pwaasword of that user in the map. Based on the user, it also assign him/her a role.
 
 
