@@ -118,4 +118,7 @@ To illustrate the concepts, we have used an *EmbeddedIdentityStore* which, by de
 
 The Java EE Security API can be extended. In this exerice, we will evolve our application to use a custom *IndendtityStore* instead of the *EmbeddedIdentityStore*. In the interreste of time, the *IdentityStore* we will develop will not be secure.
 
+In the servlet class, remove or comment the *@EmbeddedIdentityStoreDefinition* annotation.
+Now, create a java class named ...
+
 
