@@ -84,11 +84,13 @@ You can now add the following annotations:
 
 :arrow_right: This annotation specify the speicifc container authentication mechanism : "HTTP basic access authentication"and make that it available as an enabled CDI bean.
 
+```java
     @EmbeddedIdentityStoreDefinition({
         @Credentials(callerName = "david", password = "david", groups = {"foo"}),
         @Credentials(callerName = "ed", password = "ed", groups = {"bar",}),
         @Credentials(callerName = "michael", password = "michael", groups = {"foo"})}
     )
+```
 
 :arrow_right: This annotation is used to specify which IdentityStore to use, in this case, we will use the   Embedded Identity Store which require to directly specify our users. 
 
@@ -97,13 +99,14 @@ Since EmbeddedIdentityStore is unsecure it was decided to not include it in the 
 
 To compile your code, you need to add the Soteria dependency to your pom.xml 
 
+```xml
         <dependency>
             <groupId>org.glassfish.soteria</groupId>
             <artifactId>javax.security.enterprise</artifactId>
             <version>1.0</version>
             <scope>provided</scope>
         </dependency>
-
+```
 
 Now you can test the application, *david* and *michael* should be able to logged in the application while *ed* will be rejected (HTTP Status 403 - Forbidden) as he doesn't have the approrpiate *"foo"* role. This error page is obviously customizable but that is beyond the scope of this exercice.
 
@@ -121,9 +124,10 @@ The Java EE Security API can be extended. In this exerice, we will evolve our ap
 In the servlet class, remove or comment the *@EmbeddedIdentityStoreDefinition* annotation.
 Now, create a java class named TestIdentityStore.java. As this class will implement an IndentiyStore, it has to iplments the IdentityStore interface. Also make sure it is has the Application scope as follow :
 
+```java
         @ApplicationScoped
         public class TestIdentityStore implements IdentityStore {
-
+```
 ddd
 
 
