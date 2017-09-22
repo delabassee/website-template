@@ -114,7 +114,7 @@ To compile your code, you need to add the Soteria dependency to your pom.xml
  </dependency>
 ```
 
-Now you can test the application, *david* and *michael* should be able to logged in the application while *ed* will be rejected (HTTP Status 403 - Forbidden) as he doesn't have the approrpiate *"foo"* role. This error page is obviously customizable but that is beyond the scope of this exercice.
+Now you can test the application, *david* and *michael* should be able to logged in the application while *ed* should be rejected (HTTP Status 403 - Forbidden) as he doesn't have the approrpiate *"foo"* role. This error page is obviously customizable but that is beyond the scope of this exercice.
 
 *PIC*
 
