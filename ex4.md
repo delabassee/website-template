@@ -89,7 +89,7 @@ You can now add the following annotations:
 ```java
  @BasicAuthenticationMechanismDefinition(realmName="HOL-basic" )
 ```
-:arrow_right: This annotation specify the speicifc container authentication mechanism : "HTTP basic access authentication"and make that it available as an enabled CDI bean.
+:arrow_right: This annotation specify to the container that it should use the HTTP basic access authentication mechanism, it will be made available as an CDI enabled bean. The realmName is purely informative
 
 ```java
  @EmbeddedIdentityStoreDefinition({
