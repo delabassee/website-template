@@ -12,13 +12,14 @@ Select the projects's *pom.xml*, under *"Project Files"*. Now you can update the
 
 :bulb: This Lab is only using APIs from the Java EE 8 Profile.
 
-
+```xml
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>8.0</version>
             <scope>provided</scope>
         </dependency>
+```
 
 ## Create the Web application
 
@@ -38,6 +39,7 @@ Navigate to the servlet source that has just been created and locate the *proces
 
 Update it as follow
 
+```java
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -50,6 +52,7 @@ Update it as follow
                         
         }
     }
+```
 
 Now right click and select *"Run File"*. This action will compile and deploy our Web Application to GlassFish 5, NetBeans will then launch the browser to test it.
 
@@ -66,22 +69,25 @@ We now have a simple CDI enabled Servlet 4.0 basic application that we will secu
 
 In the servlet class source, you shoudl have the following annotation 
 
+```java
     @WebServlet(name = "NewServlet", urlPatterns = {"/test"})
-
+```
 :arrow_right: We are specifying to GlassFish Web container that this class is a servlet and that its url is *"/test"* (under the the context of the Web application).
 
 You can now add the following annotations:
-
+```java
     @DeclareRoles({"foo", "bar"})
-    
+```
 :arrow_right: This annotation specific that our application will work with 2 types of user roles: foo & bar.
 
+```java
     @ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
-
+```
 :arrow_right: This annotation specify security constraints to be enforced by the Servlet container on HTTP protocol messages, i.e. only user of role *"foo"* will be allowed.
 
+```java
     @BasicAuthenticationMechanismDefinition(realmName="HOL-basic" )
-
+```
 :arrow_right: This annotation specify the speicifc container authentication mechanism : "HTTP basic access authentication"and make that it available as an enabled CDI bean.
 
 ```java
