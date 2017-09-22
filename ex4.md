@@ -196,7 +196,7 @@ In this exercise, we have secured our Web application using the Basic Authentica
 [HttpAuthenticationMechanism](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/authentication/mechanism/http/HttpAuthenticationMechanism.html), a new interface introduced by the Security API. This interface is used to define authentication mechanism for Servlet applications, to define a mechanism that obtains a caller's credentials in some way, using the HTTP protocol. Implementations are expected and encouraged to delegate the actual credential validation and/or retrieval of the caller name with optional groups to an IdentityStore. That is how the authentication mechanism that we have used do and as you saw, we have used the Basic Authentication and we were able to easily switch from one the EmbeddedIdentityStore to our custom IdentityStore.
 
 To learn more about the Security API, you can check at your leisure 
-* how to [write a custom authentication mechanism] (https://github.com/javaee/security-soteria/tree/master/test/app-custom)
-* how to [use the SecurityContext](https://github.com/javaee/security-soteria/tree/master/test/app-securitycontext)
+* How to [write a custom authentication mechanism](https://github.com/javaee/security-soteria/tree/master/test/app-custom)
+* How to [use the SecurityContext](https://github.com/javaee/security-soteria/tree/master/test/app-securitycontext)
 * [Java EE Security API specification](https://jcp.org/aboutJava/communityprocess/final/jsr375/index.html)
 
