@@ -45,10 +45,11 @@ Update it as follow
     response.setContentType("text/html;charset=UTF-8");
     try (PrintWriter out = response.getWriter()) {
         out.println("<!DOCTYPE html><html><body>");
-        out.println("<div style=\"font-size:150%;font-weight:100;font-family: sans-serif;text-align: center;color: DimGray;margin-top: 40vh;line-height: 150%\">");
+        out.println("<div style=\"font-size:150%;font-weight:100;font-family: sans-serif;"); 
+        out.println("text-align: center;color: DimGray;margin-top: 40vh;line-height: 150%\">");
         out.println("Java EE 8 HoL<br/>");
         out.println(request.getAuthType());
-        out.println("</body></html>");                     
+        out.println("</div></body></html>");                     
     }
  }
 ```
