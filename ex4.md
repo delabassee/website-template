@@ -64,7 +64,7 @@ If it works, you will simply see the text produced by the processRequest method 
 
 We now have a simple CDI enabled Servlet 4.0 basic application that we will secure using the Java EE Security API.
 
-:warning: To demonstrate the concept, we will use Basic Authentication. BasicAuth is a simple mechanism where the browser sends the user name and the password as unencrypted base64 encoded text to the server. This is **clearly not a secure approach and it shouldn't be used for any serious application:bangbang:**
+:warning: To demonstrate the concept, we will use [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication), a simple mechanism where the browser sends the user name and the password as unencrypted base64 encoded text to the server. This is **clearly not a secure approach and it shouldn't be used for any serious application:bangbang:**
 
 
 In the servlet class source, you shoudl have the following annotation 
