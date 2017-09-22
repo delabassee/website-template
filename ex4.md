@@ -149,7 +149,7 @@ We need to implement the [validate](https://javaee.github.io/javaee-spec/javadoc
 Add this code to create and populate the map that will hold our users.
 
 ```java
- static Map<String, String> unsecureStore = new HashMap<>();    
+ private static final Map<String, String> unsecureStore = new HashMap<>();    
     
  public TestIdentityStore() {        
     // Don't do this at home, highly unsecure!
