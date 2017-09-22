@@ -13,12 +13,12 @@ Select the projects's *pom.xml*, under *"Project Files"*. Now you can update the
 :bulb: This Lab is only using APIs from the Java EE 8 Profile.
 
 ```xml
-   <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-api</artifactId>
-      <version>8.0</version>
-      <scope>provided</scope>
-   </dependency>
+ <dependency>
+    <groupId>javax</groupId>
+    <artifactId>javaee-api</artifactId>
+    <version>8.0</version>
+    <scope>provided</scope>
+ </dependency>
 ```
 
 ## Create the Web application
@@ -40,17 +40,17 @@ Navigate to the servlet source that has just been created and locate the *proces
 Update it as follow
 
 ```java
-  protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+ protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-     response.setContentType("text/html;charset=UTF-8");
-     try (PrintWriter out = response.getWriter()) {
-         out.println("<!DOCTYPE html><html><body>");
-         out.println("<div style=\"font-size:150%;font-weight:100;font-family: sans-serif;text-align: center;color: DimGray;margin-top: 40vh;line-height: 150%\">");
-         out.println("Java EE 8 HoL<br/>");
-         out.println(request.getAuthType());
-         out.println("</body></html>");                     
-     }
-  }
+    response.setContentType("text/html;charset=UTF-8");
+    try (PrintWriter out = response.getWriter()) {
+        out.println("<!DOCTYPE html><html><body>");
+        out.println("<div style=\"font-size:150%;font-weight:100;font-family: sans-serif;text-align: center;color: DimGray;margin-top: 40vh;line-height: 150%\">");
+        out.println("Java EE 8 HoL<br/>");
+        out.println(request.getAuthType());
+        out.println("</body></html>");                     
+    }
+ }
 ```
 
 Now right click and select *"Run File"*. This action will compile and deploy our Web Application to GlassFish 5, NetBeans will then launch the browser to test it.
@@ -69,32 +69,32 @@ We now have a simple CDI enabled Servlet 4.0 basic application that we will secu
 In the servlet class source, you shoudl have the following annotation 
 
 ```java
-   @WebServlet(name = "NewServlet", urlPatterns = {"/test"})
+ @WebServlet(name = "NewServlet", urlPatterns = {"/test"})
 ```
 :arrow_right: We are specifying to GlassFish Web container that this class is a servlet and that its url is *"/test"* (under the the context of the Web application).
 
 You can now add the following annotations:
 ```java
-   @DeclareRoles({"foo", "bar"})
+ @DeclareRoles({"foo", "bar"})
 ```
 :arrow_right: This annotation specific that our application will work with 2 types of user roles: foo & bar.
 
 ```java
-   @ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
+ @ServletSecurity(@HttpConstraint(rolesAllowed = "foo"))
 ```
 :arrow_right: This annotation specify security constraints to be enforced by the Servlet container on HTTP protocol messages, i.e. only user of role *"foo"* will be allowed.
 
 ```java
-   @BasicAuthenticationMechanismDefinition(realmName="HOL-basic" )
+ @BasicAuthenticationMechanismDefinition(realmName="HOL-basic" )
 ```
 :arrow_right: This annotation specify the speicifc container authentication mechanism : "HTTP basic access authentication"and make that it available as an enabled CDI bean.
 
 ```java
-   @EmbeddedIdentityStoreDefinition({
-      @Credentials(callerName = "david", password = "david", groups = {"foo"}),
-      @Credentials(callerName = "ed", password = "ed", groups = {"bar",}),
-      @Credentials(callerName = "michael", password = "michael", groups = {"foo"})}
-   )
+ @EmbeddedIdentityStoreDefinition({
+    @Credentials(callerName = "david", password = "david", groups = {"foo"}),
+    @Credentials(callerName = "ed", password = "ed", groups = {"bar",}),
+    @Credentials(callerName = "michael", password = "michael", groups = {"foo"})}
+ )
 ```
 
 :arrow_right: This annotation is used to specify which IdentityStore to use, in this case, we will use the   Embedded Identity Store which require to directly specify our users. 
@@ -105,12 +105,12 @@ Since EmbeddedIdentityStore is unsecure it was decided to not include it in the 
 To compile your code, you need to add the Soteria dependency to your pom.xml 
 
 ```xml
-   <dependency>
-      <groupId>org.glassfish.soteria</groupId>
-      <artifactId>javax.security.enterprise</artifactId>
-      <version>1.0</version>
-      <scope>provided</scope>
-   </dependency>
+  <dependency>
+     <groupId>org.glassfish.soteria</groupId>
+     <artifactId>javax.security.enterprise</artifactId>
+     <version>1.0</version>
+     <scope>provided</scope>
+ </dependency>
 ```
 
 Now you can test the application, *david* and *michael* should be able to logged in the application while *ed* will be rejected (HTTP Status 403 - Forbidden) as he doesn't have the approrpiate *"foo"* role. This error page is obviously customizable but that is beyond the scope of this exercice.
@@ -130,16 +130,17 @@ In the servlet class, remove or comment the *@EmbeddedIdentityStoreDefinition* a
 Now, create a java class named **TestIdentityStore.java**. As this class will implement an IndentiyStore, it has to iplments the *IdentityStore* interface. Also make sure the class has the *Application* scope by annotating it with *@ApplicationScoped* as below.
 
 ```java
-   @ApplicationScoped
-   public class TestIdentityStore implements IdentityStore {
+ @ApplicationScoped
+ public class TestIdentityStore implements IdentityStore {
+ ...
 ```
 NetBeans will complain that some imports are missing, fix those.
 
 **PIC4**
 
 ```java
-   import javax.enterprise.context.ApplicationScoped;
-   import javax.security.enterprise.identitystore.IdentityStore;
+ import javax.enterprise.context.ApplicationScoped;
+ import javax.security.enterprise.identitystore.IdentityStore;
 ```
 
 
