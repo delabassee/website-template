@@ -9,3 +9,5 @@ Chrome will complain by saying that "*Your connection is not private*"; click on
 **PIC5-1**
 
 Login as *ed/ED*, you should see the 'main screen' and a small blue lightning at the top right corner. This is Chrome HTTP/2 indicator,  blue means that the connection is server over HTTP/2. If you click on it, you will be able to details on the HTTP/2 connection (streams, frames, etc.). This is really all it takes to HTTP/2 enable an exisiting Servlet application, just deploy on a Servlet 4 container! 
+
+**PIC5-2**
