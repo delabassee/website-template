@@ -66,6 +66,7 @@ We now have a simple CDI enabled Servlet 4.0 basic application that we will secu
 
 :warning: To demonstrate the concept, we will use [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication), a simple mechanism where the browser sends the user name and the password as unencrypted base64 encoded text to the server. This is **clearly not a secure approach and it shouldn't be used for any serious application:bangbang:**
 
+In a pre Java EE 8 application, we would have to rely on application servers specific feature to configure this (ex. XML file, Admin Console, etc). In Java EE 8, it is simple and portable as the Java EE Security API introduces annotations to cope with different authentications: [@BasicAuthenticationMechanismDefinition](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/authentication/mechanism/http/BasicAuthenticationMechanismDefinition.html), [@FormAuthenticationMechanismDefinition](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/authentication/mechanism/http/FormAuthenticationMechanismDefinition.html), [CustomFormAuthenticationMechanismDefinition](https://javaee.github.io/javaee-spec/javadocs/javax/security/enterprise/authentication/mechanism/http/CustomFormAuthenticationMechanismDefinition.html).
 
 In the servlet class source, you shoudl have the following annotation 
 
@@ -98,7 +99,7 @@ You can now add the following annotations:
  )
 ```
 
-:arrow_right: This annotation is used to specify which IdentityStore to use, in this case, we will use the   Embedded Identity Store which require to directly specify our users. 
+:arrow_right: This annotation is used to specify which IdentityStore to use, in this case, we will use the Embedded Identity Store which require to directly specify our users. 
 
 :warning: In the interrest of time, we will take a shortcut and use the most basic IdentityStore to store our users: EmbeddedIdentityStore. This identity store allows you to store users details (username, password and groups) in your code in clear! *This is highly unsecure and not something you should do for any applications:bangbang:*
 Since EmbeddedIdentityStore is unsecure it was decided to not include it in the specification. Technically, the EmbeddedIdentityStore is provided by Soteria, the JSR 375 Reference Implementation so it is also available as part of GlassFish 5.
