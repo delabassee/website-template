@@ -134,6 +134,14 @@ Now, create a java class named **TestIdentityStore.java**. As this class will im
         @ApplicationScoped
         public class TestIdentityStore implements IdentityStore {
 ```
-ddd
+NetBeans will complain that some imports are missing, fix those.
+
+**PIC4**
+
+```java
+import javax.enterprise.context.ApplicationScoped;
+import javax.security.enterprise.identitystore.IdentityStore;
+```
+
 
 
